@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd ./client && npm install && npm run build && cd .. && babel lib -d dist && cp -r ./client/build ./dist/react-build",
+    "babel": "babel lib -d dist",
+    "build": "cd ./client && npm install && npm run build && cd .. && npm run babel && rm -rf ./dist/react-build && cp -r ./client/build ./dist/react-build",
     "start": "npm run build && nodemon -r dotenv/config lib/index.js",
     "serve": "node -r dotenv/config dist/index.js"
   },
