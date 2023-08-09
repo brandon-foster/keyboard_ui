@@ -1,8 +1,8 @@
 import '../css/KeyboardRowKey.css';
 
-export const KeyboardRowKey = ({ letter }) => {
+export const KeyboardRowKey = ({ letter, isActiveKey }) => {
     return (
-        <div className='KeyboardRowKey'>
+        <div className={`KeyboardRowKey ${isActiveKey && 'KeyboardRowKey-activeKey'}`}>
             { letter }
         </div>
     );

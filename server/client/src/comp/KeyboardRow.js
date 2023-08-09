@@ -1,19 +1,15 @@
 import '../css/KeyboardRow.css';
 
+import { keyboardRows } from '../data/keyboardRows';
+
 import { KeyboardRowKey } from './KeyboardRowKey';
 
-export const KeyboardRow = ({ rowId }) => {
-    const rows = [
-        ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
-        ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],        
-        ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],        
-        ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'],        
-    ];
+export const KeyboardRow = ({ rowId, activeKey }) => {
     return (
         <div className='KeyboardRow'>
-            {rows[rowId].map((letter, i) => {
+            {keyboardRows[rowId].map((letter, i) => {
                 return (
-                    <KeyboardRowKey key={`keyboard-row-key-${i}`} letter={letter}/>
+                    <KeyboardRowKey key={`keyboard-row-key-${i}`} letter={letter} isActiveKey={letter === activeKey}/>
                 );
             })}
         </div>
