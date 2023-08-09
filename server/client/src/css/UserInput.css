@@ -3,6 +3,8 @@
     border: none;
     background-color: #e3d5ca4f;
     font-size: calc(7px + 2vmin);
+    font-family: inherit;
+    color: #d5bdaf;
     resize: none;
     width: 100%;
     padding: 0;
