@@ -1,6 +1,9 @@
 import './css/App.css';
-import { KeyboardWrapper } from './comp/KeyboardWrapper';
+
 import { appConf } from './conf/appConf';
+
+import { KeyboardWrapper } from './comp/KeyboardWrapper';
+import { UserInput } from './comp/UserInput';
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
         <h1>{appConf.APP_NAME}</h1>
       </header>
       <main className='App-main'>
-        <KeyboardWrapper/>
+        <div className='App-componentContainer'>
+          <UserInput/>
+          <KeyboardWrapper/>
+        </div>
       </main>
     </div>
   );
