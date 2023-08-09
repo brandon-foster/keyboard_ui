@@ -14,3 +14,7 @@
 .KeyboardRowKey-activeKey {
     background-color: #d5bdaf85;
 }
+
+.KeyboardRowKey-spacebar {
+    width: 100%;
+}

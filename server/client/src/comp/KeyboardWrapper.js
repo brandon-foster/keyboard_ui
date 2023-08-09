@@ -19,6 +19,7 @@ export const KeyboardWrapper = () => {
                 <KeyboardRow rowId={1} activeKey={activeKey}/>
                 <KeyboardRow rowId={2} activeKey={activeKey}/>
                 <KeyboardRow rowId={3} activeKey={activeKey}/>
+                <KeyboardRow rowId={4} activeKey={activeKey}/>
             </div>
         </div>
     );
