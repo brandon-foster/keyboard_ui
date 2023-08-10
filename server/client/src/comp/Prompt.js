@@ -1,9 +1,17 @@
-import '../css/Prompt.css';
+import '../css/UserInput-and-Prompt.css';
 
-export const Prompt = () => {
+import { useEffect, useRef } from 'react';
+
+export const Prompt = ({ scrollTop }) => {
+    const promptTextarea = useRef(null);
+    useEffect(() => {
+        console.info(`Prompt detected that scrollTop changed`);
+        if (promptTextarea.current) {
+            promptTextarea.current.scrollTop = scrollTop;
+        }
+    }, [scrollTop]);
+    const currentPrompt = 'The quick brown fox jumps over the lazy dog.';
     return (
-        <div className='Prompt'>
-            <p className='Prompt-p'>The quick brown fox jumps over the lazy dog.</p>
-        </div>
+        <textarea ref={promptTextarea} id='Prompt' rows='4' defaultValue={currentPrompt}></textarea>
     );
 };

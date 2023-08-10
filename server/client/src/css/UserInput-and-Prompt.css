@@ -1,0 +1,20 @@
+#UserInput,
+#Prompt {
+    outline: none;
+    border: none;
+    font-size: calc(7px + 2vmin);
+    font-family: inherit;
+    resize: none;
+    width: 100%;
+    padding: 0;
+}
+
+#Prompt {
+    background-color: #e3d5ca4f;
+    color: #d5bdaf;
+}
+
+#UserInput {
+    background-color: #e3d5ca;
+    color: #f5ebe0;
+}

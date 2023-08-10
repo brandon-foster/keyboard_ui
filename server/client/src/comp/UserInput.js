@@ -1,7 +1,8 @@
-import '../css/UserInput.css';
-
-export const UserInput = () => {
+export const UserInput = ({ setScrollTop }) => {
+    function onScroll(e) {
+        setScrollTop(e.target.scrollTop);
+    }
     return (
-        <textarea rows='4' className='UserInput' autoFocus></textarea>
+        <textarea id='UserInput' rows='4' autoFocus onScroll={onScroll}></textarea>
     );
 };

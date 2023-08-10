@@ -1,5 +1,7 @@
 import './css/App.css';
 
+import { useState } from 'react';
+
 import { appConf } from './conf/appConf';
 
 import { KeyboardWrapper } from './comp/KeyboardWrapper';
@@ -7,6 +9,7 @@ import { UserInput } from './comp/UserInput';
 import { Prompt } from './comp/Prompt';
 
 function App() {
+  const [scrollTop, setScrollTop] = useState(null);
   return (
     <div className='App'>
       <header>
@@ -14,8 +17,8 @@ function App() {
       </header>
       <main className='App-main'>
         <div className='App-componentContainer'>
-          <Prompt/>
-          <UserInput/>
+          <Prompt scrollTop={scrollTop}/>
+          <UserInput setScrollTop={setScrollTop}/>
           <KeyboardWrapper/>
         </div>
       </main>
